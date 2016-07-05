@@ -15,8 +15,8 @@ class twitt {
 	{
 		
 		$data = $this->twAPI
-					  ->setGetfield('?screen_name='.$user_name.'&count='.$count)
-					   ->buildOauth("https://api.twitter.com/1.1/statuses/user_timeline.json", "GET")
+				->setGetfield('?screen_name='.$user_name.'&count='.$count)
+					->buildOauth("https://api.twitter.com/1.1/statuses/user_timeline.json", "GET")
 						->performRequest(); 
 						
 		$info = json_decode($data, $assoc=TRUE);
